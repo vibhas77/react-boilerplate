@@ -1,0 +1,42 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "This is my react-boilerplate",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack",
+    "build-babel": "npm run build-babel-server && npm run build-babel-client",
+    "build-babel-server": "babel src/server --out-dir ./dist",
+    "build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
+    "start": "node ./dist/server.js",
+    "nodemon" : "nodemon ./dist/server.js",
+    "build-watch" : "webpack --watch",
+    "start-watch" : "npm-run-all -p nodemon build-watch",
+    "test": "jest ./src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.7",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "express": "^4.16.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "require": "^2.4.20",
+    "requirejs": "^2.3.6",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.12.0"
+  }
+}
